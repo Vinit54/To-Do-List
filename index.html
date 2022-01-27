@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div id="myDIV" class="header">
+        <h2>To Do List</h2>
+        <form id="addTodoForm" onsubmit="newElement(event)">
+            <input type="text" id="myInput" placeholder="Title...">
+            <input type="text" id="myDesc" placeholder="Description...">
+            <input id="addBtn" type="submit" value="Add"  class="addBtn">
+
+            <!-- <input type="submit" value="Sort" class="addBtn">-->
+            <button class="button" onclick="sortList()"><i class="fas fa-sort"></i> Sort</button>
+            <!-- Buttons to choose list or grid view -->
+            <button class="button" onclick="listView()"><i class="fa fa-bars"></i> List</button>
+            <button class="button" onclick="cardView()"><i class="fa fa-th-large"></i>Card</button>
+        </form>
+        <form id="updateTodoForm" onsubmit="updateElement(event)">
+            <input type="text" id="editInput" disabled>
+            <input type="text" id="editDesc" placeholder="Description...">
+            <input id="updateBtn" type="submit" value="Update" >
+        </form>
+        <!-- <input type="text"  placeholder="Search...">
+        <button type="submit" value="Search" class="addBtn">Search</button> -->
+       
+      </div>
+        
+      <!--<div class="card">-->
+      <div class="flexbox-container row">
+         <ul id="myUL" class="checked"></ul>
+    </div>
+
+       <script src="index.js" charset="utf-8"></script>
+</body>
+</html>
